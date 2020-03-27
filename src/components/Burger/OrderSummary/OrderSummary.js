@@ -3,10 +3,11 @@ import Aux from '../../../hoc/Auxiliary';
 import Button from '../../UI/Button/Button';
 
 class OrderSummary extends Component {
-    componentWillUpdate() {
+    // This could be a functional component , doesn't have to be a class
+    UNSAFE_componentWillUpdate () {
         console.log('OrderSummary will Update');
     }
-    
+
     render () {
         const ingredientSummary = Object.keys(this.props.ingredients)
         .map(igKey => {

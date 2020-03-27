@@ -3,8 +3,15 @@ import classes from './Modal.module.css';
 import Aux from '../../../hoc/Auxiliary';
 import BackDrop from '../BackDrop/BackDrop';
 
+//UNSAFE_componentWillUpdate instead of componentWillUpdate for react 17 and greater version
 class Modal extends Component {
-    
+    shouldComponentUpdate(nextProps , nextState) {
+        return nextProps.show !== this.props.show;
+    }
+
+    UNSAFE_componentWillUpdate  () {
+        console.log('[Modal] will Update');
+    }
 
     render () {
         return (
