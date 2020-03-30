@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import classes from './Modal.module.css';
-import Aux from '../../../hoc/Auxiliary';
+import Aux from '../../../hoc/Auxiliary/Auxiliary';
 import BackDrop from '../BackDrop/BackDrop';
 
 //UNSAFE_componentWillUpdate instead of componentWillUpdate for react 17 and greater version
