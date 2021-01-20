@@ -5,8 +5,8 @@ import BackDrop from '../BackDrop/BackDrop';
 
 //UNSAFE_componentWillUpdate instead of componentWillUpdate for react 17 and greater version
 class Modal extends Component {
-    shouldComponentUpdate(nextProps , nextState) {
-        return nextProps.show !== this.props.show;
+    shouldComponentUpdate ( nextProps, nextState ) {
+        return nextProps.show !== this.props.show || nextProps.children !== this.props.children;
     }
 
     UNSAFE_componentWillUpdate  () {
